@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ecommerce/static/css/main.f5f149a8.css",
+    "main.css": "/ecommerce/static/css/main.78e27739.css",
     "main.js": "/ecommerce/static/js/main.e309aa04.js",
     "static/js/592.918a8bb2.chunk.js": "/ecommerce/static/js/592.918a8bb2.chunk.js",
     "static/media/consejos-decorar-lamparas-colgantes.webp": "/ecommerce/static/media/consejos-decorar-lamparas-colgantes.99ef8d36119994e9f2f9.webp",
     "index.html": "/ecommerce/index.html",
-    "main.f5f149a8.css.map": "/ecommerce/static/css/main.f5f149a8.css.map",
+    "main.78e27739.css.map": "/ecommerce/static/css/main.78e27739.css.map",
     "main.e309aa04.js.map": "/ecommerce/static/js/main.e309aa04.js.map",
     "592.918a8bb2.chunk.js.map": "/ecommerce/static/js/592.918a8bb2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5f149a8.css",
+    "static/css/main.78e27739.css",
     "static/js/main.e309aa04.js"
   ]
 }
