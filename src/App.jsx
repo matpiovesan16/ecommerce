@@ -21,11 +21,11 @@ function App() {
       <Carrito></Carrito>
       <SignIn />
       <Routes>
-        <Route path="/" element={<Hero/>}></Route>
-          <Route  path="/productos" element={<Productos />}></Route>
-          <Route  path="/producto/:id" element={<ProductoDetalle />}> </Route>
-          <Route  path="/checkout" element={<Checkout />}></Route>
-          <Route  path="/signup" element={<SignUp />}></Route>
+        <Route path="/ecommerce/" element={<Hero/>}></Route>
+          <Route  path="/ecommerce/productos" element={<Productos />}></Route>
+          <Route  path="/ecommerce/producto/:id" element={<ProductoDetalle />}> </Route>
+          <Route  path="/ecommerce/checkout" element={<Checkout />}></Route>
+          <Route  path="/ecommerce/signup" element={<SignUp />}></Route>
           
         </Routes>
         <Footer></Footer>
