@@ -97,7 +97,7 @@ export default function SignIn() {
                   ¿Olvidaste la contraseña?
                 </Link>
                 <br />
-                <Link href="/signup" variant="body2">
+                <Link href="/ecommerce/signup" variant="body2">
                   Crear cuenta
                 </Link>
               </Grid>

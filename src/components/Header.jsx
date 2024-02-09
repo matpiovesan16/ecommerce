@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <div className="header__contenedor">
-      <Link to="/">
+      <Link to="ecommerce/">
         <div className="logo">
           <h1>LFA Distribuciones</h1>
         </div>

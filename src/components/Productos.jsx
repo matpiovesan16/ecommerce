@@ -4,8 +4,7 @@ import Producto from "./Producto";
 
 export default function Productos() {
 
-  const value = useContext(DataContext);
- 
+
 
 
 

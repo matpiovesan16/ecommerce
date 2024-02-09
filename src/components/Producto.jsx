@@ -17,7 +17,7 @@ export default function Producto() {
   let cargaProductos = productos.map((produc) =>{
     return(
       <div className="producto" key={produc.id}>
-            <Link to={`/producto/${produc.id}`} className="img__producto">
+            <Link to={`/ecommerce/producto/${produc.id}`} className="img__producto">
               <img src={produc.image} alt={produc.title} />
             </Link>
             <div className="producto__footer">
@@ -28,7 +28,7 @@ export default function Producto() {
             <div className="button">
               <button className="btn" onClick={()=>addCarrito(produc.id)}>ADD</button>
   
-                <Link to={`/producto/${produc.id}`}>VER</Link>
+                <Link to={`/ecommerce/producto/${produc.id}`}>VER</Link>
               
             </div>
           </div>
