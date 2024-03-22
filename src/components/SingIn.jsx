@@ -1,19 +1,15 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { DataContext } from './DataProvider';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 
 
 const defaultTheme = createTheme();
@@ -22,7 +18,7 @@ export default function SignIn() {
 
     const value = useContext(DataContext);
     const [session, setSession] = value.session;
-  
+    const api = "http://localhost:8083/api/login";
   
     const showSessions = session ? "singins show" : "singins";
     const showSession = session ? "singin show" : "singin";
@@ -31,16 +27,53 @@ export default function SignIn() {
     const togglefalse = () => {
       setSession(false);
     };
-  
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.currentTarget);
+
+  console.log({
+    email: formData.get('email'),
+    password: formData.get('password'),
+  });
+
+  try {
+      const response = await fetch(api, {
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              email: formData.get('email'),
+              password: formData.get('password')
+          })
+      });
+
+      const data = await response.text();
+      if (data != "Fail") {
+         
+          alert("¡Hola mostro!");
+      } else {
+          
+          alert("Credenciales incorrectas, ingrese nuevamente");
+      }
+  } catch (error) {
+      console.error('Error al iniciar sesión:', error);
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className={showSessions}>
