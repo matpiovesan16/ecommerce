@@ -54,7 +54,7 @@ const handleSubmit = async (event) => {
       const data = await response.text();
       if (data != "Fail") {
          
-          alert("¡Hola mostro!");
+          alert("Iinicion de sesion correcto! ");
       } else {
           
           alert("Credenciales incorrectas, ingrese nuevamente");
